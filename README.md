@@ -68,3 +68,11 @@ Since the classic diet planning problem, several mathematical models and program
 - easy database change using cereal lib for txt/csv nutrition facts serealize or sql DB conection for MYSQL ralational db 
 - dinamic minimization cost considering
 - diferents metaheuristcs solvers
+
+## Latest references used
+
+- avaliation function mathematics formulation:
+- penaltyes formualtion:
+- nutrition facts:
+- predictions:
+- dinamic interations:
