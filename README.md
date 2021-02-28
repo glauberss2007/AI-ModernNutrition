@@ -21,21 +21,50 @@ Since the classic diet planning problem, several mathematical models and program
 
 ### Adjust the model to your needs
 
-- Change the enum Model ont ".../test/benchmark/main.cpp" replacing by one of availables "STATIC_CALORIC_DEVIATION", "STATIC_MEASLTIME_CALORIC_DEVIATION", "DINAMIC_ONLY_CALORIC_DEVIATION" and "DINAMIC_PREFERENCES_PREDICTION_CALORIC_DEVIATION".
+- Change the enum Model (.../test/benchmark/main.cpp) replacing by one of current availables:
 
 ### static_caloric_deviation
 
+- nutritional facts based on TACO
+- objective function: minimize caloric difference against target
+- penalties applied according to nutritional deviations intensity
+- result: a list of foods to be eat freely during the day
+
 ### static_mealstime_caloric_deviation
+
+- separate dayle recomendation menu into 6 diferents mealtimes
+- penalties applied according to nutritional deviations proportionally to mealstime
+- result: a list of food considering mealtimes proportionaly (caloric and nutrients)
 
 ### dinamic_only_caloric_deviation
 
+- user interations after each mealstime inputing
+- compensatory system to equilibrate caloric recomendation during the day
+- result: dinamic menu that changes/recalculate according to user input on each mealstime
+
 ### dinamic_preferences_prediction_caloric_deviation
 
-## Nutrition Facts
+- nutrition facts separated by categories
+- prediciton instance (consume history database) based on mealstime category preferences
+- item-item score matrix created using colaborative filtering
+- first-fit algorithym to include high scored itens limited on 50% of mealstime caloric target
+
+### dinamic_preferences_prediction_cost_minimization
+
+- change avaliation function to cost minimization + nutritional deviation
+- caloric value as a nutrient range like others
 
 ## Solver algorithm 
 
 ### Genetic
 
+- initial random population
+- pattern select strategy:
+- child select strategy:
+- cross-over strategy:
+- others parameters:
+
 ## Coming soon
-- Script to automatically adjust the template for new projects
+- easy database change using cereal
+- dinamic minimization cost considering
+- diferents metaheuristcs solvers
