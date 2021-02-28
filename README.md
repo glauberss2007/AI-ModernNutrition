@@ -6,10 +6,6 @@
   <img src="https://repository-images.githubusercontent.com/254842585/4dfa7580-7ffb-11ea-99d0-46b8fe2f4170" height="175" width="auto" />
 </p>
 
-<p align="center">
-  <img src="https://repository-images.githubusercontent.com/254842585/4dfa7580-7ffb-11ea-99d0-46b8fe2f4170" height="175" width="auto" />
-</p>
-
 # Modern Nutrition
 
 Since the classic diet planning problem, several mathematical models and programming techniques have been shown to generate menus following several restrictions. However, a new trend not yet addressed is behavioral nutrition. This scientific approach, focused on nutritional counseling, proves to be more effective than the common restrictive diets, by adapting to the habits and preferences of users. Therefore, aiming to contribute to a non-restrictive and intuitive diet, in this project we propose a new dinamic optimization model considering preferences predictions.
