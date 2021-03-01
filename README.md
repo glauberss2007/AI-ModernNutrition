@@ -3,7 +3,7 @@
 [![Actions Status](https://github.com/TheLartians/ModernCppStarter/workflows/Ubuntu/badge.svg)](https://github.com/glauberss2007/modern-nutrition/actions/actions)
 
 <p align="center">
-  <img src="https://repository-images.githubusercontent.com/254842585/4dfa7580-7ffb-11ea-99d0-46b8fe2f4170" height="175" width="auto" />
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/model-fluxogram.png" height="150" width="auto" />
 </p>
 
 # Modern Nutrition
@@ -12,7 +12,6 @@ Since the classic diet planning problem, several mathematical models and program
 
 ## Features
 
-- [Modern CMake practices](https://pabloariasal.github.io/2018/02/19/its-time-to-do-cmake-right/)
 - Clean separation of library and executable code
 - Continuous integration via [GitHub Actions](https://help.github.com/en/actions/)
 - Reproducible dependency management via [CPM.cmake](https://github.com/TheLartians/CPM.cmake)
@@ -28,22 +27,22 @@ Since the classic diet planning problem, several mathematical models and program
 - nutritional facts based on TACO (http://www.nepa.unicamp.br/taco/contar/taco_4_edicao_ampliada_e_revisada.pdf?arquivo=taco_4_versao_ampliada_e_revisada.pdf)
 - objective function: minimize caloric difference against target:
 <p align="center">
-  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/caloric-deviation.png" height="80" width="auto" />
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/caloric-deviation.png" height="60" width="auto" />
 </p>
 
 - nutritional deviation values:
 <p align="center">
-  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/nutritional-table.png" height="140" width="auto" />
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/nutritional-table.png" height="160" width="auto" />
 </p>
 
 - nutrition facts separated by categories with diferent portion size:
 <p align="center">
-  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/taco-food-categories.png" height="140" width="auto" />
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/taco-food-categories.png" height="180" width="auto" />
 </p>
 
 - penalties applied according to nutritional deviations intensity:
 <p align="center">
-  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/penalties-static-model.png" height="100" width="auto" />
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/penalties-static-model.png" height="90" width="auto" />
 </p>
 
 - result: a list of foods to be eat freely during the day.
@@ -58,7 +57,7 @@ Since the classic diet planning problem, several mathematical models and program
 - penalties formulation applied according to nutritional deviations proportionally to mealstime (the penalties are applied according to mealstime caloric target inporcentage of total):
 
 <p align="center">
-  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/mealstime-penalties.png" height="110" width="auto" />
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/mealstime-penalties.png" height="100" width="auto" />
 </p>
 
 - result: a list of food considering mealtimes proportionaly (caloric and nutrients).
@@ -68,12 +67,12 @@ Since the classic diet planning problem, several mathematical models and program
 - user interations after each mealstime inputing.caloric deviation consume
      diference of user consume input and mealstime menu recomended calculation:
 <p align="center">
-  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/caloric-diference-calculation.png" height="90" width="auto" />
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/caloric-diference-calculation.png" height="60" width="auto" />
 </p>
 
 - compensatory system to equilibrate/recalculate further mealstimes considering current user consume:
 <p align="center">
-  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/caloric-diference-calculation.png" height="90" width="auto" />
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/caloric-diference-calculation.png" height="60" width="auto" />
 </p>
 
 - result: dinamic menu that changes/recalculate according to user input on each mealstime
@@ -83,7 +82,7 @@ Since the classic diet planning problem, several mathematical models and program
 - prediciton instance (consume history database) based on mealstime category preferences
     instance generation rule:
 <p align="center">
-  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/prediction-instance.png" height="90" width="auto" />
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/prediction-instance.png" height="110" width="auto" />
 </p>
 PS: The category preference was used due a limitation provided due no real consume database availability actually. It is necessary to create a real food consume per mealstime database in ten future...
     
@@ -91,12 +90,12 @@ PS: The category preference was used due a limitation provided due no real consu
 
     magnitude calculation:
     <p align="center">
-    <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/prediction-magnitude.png" height="90" width="auto" />
+    <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/prediction-magnitude.png" height="60" width="auto" />
     </p>
     
     item importance:
     <p align="center">
-    <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/food-importance.png" height="90" width="auto" />
+    <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/food-importance.png" height="60" width="auto" />
     </p>
     
     cossine similarity calculation:
@@ -106,7 +105,7 @@ PS: The category preference was used due a limitation provided due no real consu
     
     final vector score of itens in a specific mealstime for an user:
     <p align="center">
-    <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/food-score-based-on-item-mealstime-user.png" height="90" width="auto" />
+    <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/food-score-based-on-item-mealstime-user.png" height="80" width="auto" />
     </p>
 
 - first-fit algorithym to include high scored itens limited on 50% of mealstime caloric target.
@@ -116,7 +115,7 @@ PS: The category preference was used due a limitation provided due no real consu
 - populate TACO DB with prices based on ENAPE.
 - change the objective function to maxmizing and avaliation function to cost minimization + nutritional deviation:
 <p align="center">
-    <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/cost-fitness-function.png" height="90" width="auto" />
+    <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/cost-fitness-function.png" height="60" width="auto" />
     </p>
 
 - caloric value as a nutrient range like others using 1600~2400 for womens and 2000~3000 for mens.
