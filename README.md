@@ -25,10 +25,21 @@ Since the classic diet planning problem, several mathematical models and program
 
 ### static_caloric_deviation
 
-- nutritional facts based on TACO
-- objective function: minimize caloric difference against target
-- penalties applied according to nutritional deviations intensity
-- result: a list of foods to be eat freely during the day
+- nutritional facts based on TACO (http://www.nepa.unicamp.br/taco/contar/taco_4_edicao_ampliada_e_revisada.pdf?arquivo=taco_4_versao_ampliada_e_revisada.pdf)
+- objective function: minimize caloric difference against target:
+<p align="center">
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/caloric-deviation.png" height="175" width="auto" />
+</p>
+
+- penalties applied according to nutritional deviations intensity:
+<p align="center">
+  <img src="https://repository-images.githubusercontent.com/254842585/4dfa7580-7ffb-11ea-99d0-46b8fe2f4170" height="175" width="auto" />
+</p>
+
+- result: a list of foods to be eat freely during the day:
+<p align="center">
+  <img src="https://repository-images.githubusercontent.com/254842585/4dfa7580-7ffb-11ea-99d0-46b8fe2f4170" height="175" width="auto" />
+</p>
 
 ### static_mealstime_caloric_deviation
 
