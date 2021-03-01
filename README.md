@@ -3,7 +3,7 @@
 [![Actions Status](https://github.com/TheLartians/ModernCppStarter/workflows/Ubuntu/badge.svg)](https://github.com/glauberss2007/modern-nutrition/actions/actions)
 
 <p align="center">
-  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/model-fluxogram.png" height="220" width="auto" />
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/model-fluxogram.png" height="300" width="auto" />
 </p>
 
 # Modern Nutrition
