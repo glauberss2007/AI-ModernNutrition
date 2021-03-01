@@ -113,12 +113,12 @@ PS: The category preference was used due a limitation provided due no real consu
 ### dinamic_preferences_prediction_cost_minimization
 
 - populate TACO DB with prices based on ENAPE.
-- change the objective function to maxmizing and avaliation function to cost minimization + nutritional deviation:
+- (on going) change the objective function to maxmizing and avaliation function to cost minimization + nutritional deviation:
 <p align="center">
     <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/cost-fitness-function.png" height="60" width="auto" />
     </p>
 
-- caloric value as a nutrient range like others using 1600~2400 for womens and 2000~3000 for mens.
+- caloric value as a nutrient range like others using 1600-2400 for womens and 2000-3000 for mens.
 
 ## Solver algorithm 
 
