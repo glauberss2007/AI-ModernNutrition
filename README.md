@@ -2,13 +2,13 @@
 [![Actions Status](https://github.com/TheLartians/ModernCppStarter/workflows/Windows/badge.svg)](https://github.com/glauberss2007/modern-nutrition/actions/actions)
 [![Actions Status](https://github.com/TheLartians/ModernCppStarter/workflows/Ubuntu/badge.svg)](https://github.com/glauberss2007/modern-nutrition/actions/actions)
 
-<p align="center">
-  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/model-fluxogram.png" height="350" width="auto" />
-</p>
-
 # Modern Nutrition
 
 Since the classic diet planning problem, several mathematical models and programming techniques have been shown to generate menus following several restrictions. However, a new trend not yet addressed is behavioral nutrition. This scientific approach, focused on nutritional counseling, proves to be more effective than the common restrictive diets, by adapting to the habits and preferences of users. Therefore, aiming to contribute to a non-restrictive and intuitive diet, in this project we propose a new dinamic optimization model considering preferences predictions.
+
+<p align="center">
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/model-fluxogram.png" height="350" width="auto" />
+</p>
 
 ## Features
 
