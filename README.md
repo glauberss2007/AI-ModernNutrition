@@ -28,28 +28,39 @@ Since the classic diet planning problem, several mathematical models and program
 - nutritional facts based on TACO (http://www.nepa.unicamp.br/taco/contar/taco_4_edicao_ampliada_e_revisada.pdf?arquivo=taco_4_versao_ampliada_e_revisada.pdf)
 - objective function: minimize caloric difference against target:
 <p align="center">
-  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/caloric-deviation.png" height="175" width="auto" />
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/caloric-deviation.png" height="100" width="auto" />
+</p>
+
+- nutritional deviation values:
+<p align="center">
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/nutritional-table.png" height="100" width="auto" />
 </p>
 
 - penalties applied according to nutritional deviations intensity:
 <p align="center">
-  <img src="https://repository-images.githubusercontent.com/254842585/4dfa7580-7ffb-11ea-99d0-46b8fe2f4170" height="175" width="auto" />
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/penalties-static-model.png" height="100" width="auto" />
 </p>
 
-- result: a list of foods to be eat freely during the day:
-<p align="center">
-  <img src="https://repository-images.githubusercontent.com/254842585/4dfa7580-7ffb-11ea-99d0-46b8fe2f4170" height="175" width="auto" />
-</p>
+- result: a list of foods to be eat freely during the day.
 
 ### static_mealstime_caloric_deviation
 
-- separate dayle recomendation menu into 6 diferents mealtimes
-- penalties applied according to nutritional deviations proportionally to mealstime
-- result: a list of food considering mealtimes proportionaly (caloric and nutrients)
+- separate dayle recomendation menu into 6 diferents mealtimes:
+<p align="center">
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/mealstime-division.png" height="100" width="auto" />
+</p>
+
+- penalties formulation applied according to nutritional deviations proportionally to mealstime (the penalties are applied according to mealstime caloric target inporcentage of total):
+
+<p align="center">
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/mealstime-penalties.png" height="100" width="auto" />
+</p>
+
+- result: a list of food considering mealtimes proportionaly (caloric and nutrients).
 
 ### dinamic_only_caloric_deviation
 
-- user interations after each mealstime inputing
+- user interations after each mealstime inputing.
 - compensatory system to equilibrate caloric recomendation during the day
 - result: dinamic menu that changes/recalculate according to user input on each mealstime
 
