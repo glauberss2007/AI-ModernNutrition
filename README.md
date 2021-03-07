@@ -72,7 +72,7 @@ Since the classic diet planning problem, several mathematical models and program
 
 - compensatory system to equilibrate/recalculate further mealstimes considering current user consume:
 <p align="center">
-  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/compensatory-calculation.pngg" height="60" width="auto" />
+  <img src="https://github.com/glauberss2007/modern-nutrition/blob/master/.github/workflows/images/compensatory-calculation.png" height="60" width="auto" />
 </p>
 
 - result: dinamic menu that changes/recalculate according to user input on each mealstime
