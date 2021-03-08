@@ -1,10 +1,14 @@
 #include <iostream>
 #include "experiment.h"
+#include <string>
 
 
 int main() {
     /// Size of the problem equals the amount of recipes used in the instance
     const size_t problem_size = 568;
+
+    /// number of experiments
+    int number_of_experiments = 30;
 
     /// Setting parameters
     /* Insert the numeral that indicates the model to be used
@@ -23,11 +27,13 @@ int main() {
     /// Full instance path of foods
     //Instance PATH is defined in CMAKE as LOCAL_PATH
 
-    /// Output file saved on ...ProjectName/cmake-build-debug/test/benchmark
-    std::string file_output = "experiments_result_1";
+    for (int i=1;i<=number_of_experiments;i++){
+    /// Output file saved on ...ProjectName/experiments/
+    std::string path = LOCAL_PATH_EXPORTS"experiments/static/experiments_result_";
+    std::string file_output = path + std::to_string(i);
 
     /// Solving the problem
     run_experiment(problem_size, STATIC, file_output);
-
+    }
     return 0;
 }
