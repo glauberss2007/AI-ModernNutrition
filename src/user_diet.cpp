@@ -75,6 +75,7 @@ std::vector<int> user_diet::disp(nutrition_facts &p, std::ofstream &fout) {
     fout << std::endl;
 
     // Mathplot graph with macronutrients ans micronutrients values
+    /*
     std::vector<std::vector<double>> y,z;
     if (p.getModel()==0){
         y = {{75,150,45,25}, {total_protein,total_carbo,total_lipid,total_fiber},
@@ -107,6 +108,7 @@ std::vector<int> user_diet::disp(nutrition_facts &p, std::ofstream &fout) {
               total_zinc,total_manganes},{2500*mealstime_proportion,350*mealstime_proportion,4000*mealstime_proportion,
               45*mealstime_proportion,34*mealstime_proportion,0*mealstime_proportion}};
     }
+
     // Macro nutrients plot
     matplot::subplot(2,1,0);
     auto b = matplot::bar(y);
@@ -140,6 +142,7 @@ std::vector<int> user_diet::disp(nutrition_facts &p, std::ofstream &fout) {
     matplot::save(LOCAL_PATH_EXPORTS"nutritional-menu-result/nutrients.svg");
     matplot::save(LOCAL_PATH_EXPORTS"nutritional-menu-result/nutrients-latex", "epslatex");
     matplot::show();
+    */
 
     std::cout << "Calorias: " << total_calories << ", "
               << "Custo: " << total_cost << std::endl;
