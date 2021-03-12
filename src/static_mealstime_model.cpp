@@ -25,7 +25,7 @@ void run_static_mealstime_model(std::string& file_output){
 
     //Prints on screen and in file
     u.printScreenUser(u);
-    std::ofstream fout(file_output);
+    std::ofstream fout(file_output, std::ofstream::out | std::ofstream::app);
     u.printScreenFile(u, fout);
 
     //Recreates the problem considering user data
