@@ -76,12 +76,21 @@ void evolutionary_algorithm::run() {
         evolutionary_cycle();
         _fxs.push_back(this->best_fx());
     }
-    // Generate matplot convergence image
     std::vector<int> _generations;
     for (int j=0; j < _fxs.size(); j++) {
         _generations.push_back(j);
         if (j > 0 && _fxs[j] > _fxs[j-1]) _fxs[j] = _fxs[j-1];
     }
+    // Convergence curve print
+    std::ofstream ofs(LOCAL_PATH_EXPORTS"experiments/static/static_convergence.txt",
+                      std::ofstream::out | std::ofstream::app);
+    ofs << "convergence:" << std::endl;
+    for (int i =0; i<_fxs.size();i++) ofs << _fxs[i] << ",";
+    ofs << std::endl;
+    ofs.close();
+
+    /*
+    // Generate matplot convergence image
     auto a = matplot::plot(_generations,_fxs);
     matplot::xlabel("Generation");
     matplot::ylabel("Objective Function");
@@ -89,6 +98,7 @@ void evolutionary_algorithm::run() {
     matplot::save(LOCAL_PATH_EXPORTS"/exports/convergence-curve/FXs.svg");
     matplot::save(LOCAL_PATH_EXPORTS"/exports/convergence-curve/", "epslatex");
     matplot::show();
+     */
 }
 double_t iteration;
 
