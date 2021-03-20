@@ -29,11 +29,11 @@ int main() {
 
     for (int i=1;i<=number_of_experiments;i++){
     /// Output file saved on ...ProjectName/experiments/
-    std::string path = LOCAL_PATH_EXPORTS"experiments/static_mealstime/experiments_result_";
+    std::string path = LOCAL_PATH_EXPORTS"experiments/dinamic_only/experiments_result_";
     std::string file_output = path + std::to_string(i);
 
     /// Solving the problem
-    run_experiment(problem_size, STATIC_MEASLTIME, file_output);
+    run_experiment(problem_size, DINAMIC_ONLY, file_output);
     }
     return 0;
 }

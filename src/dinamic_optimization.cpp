@@ -1,4 +1,5 @@
 #include "dinamic_optimization.h"
+#include <chrono>
 #include <iostream>
 #include <string>
 #include <utility>
@@ -22,6 +23,15 @@ void iteration::Dinamic::saveCurrentMenu(const std::vector<int>& _solucao_horari
                               const std::vector<int>& _solucaoPorcao_horario_atual) {
     this->_matrixIDs.push_back(_solucao_horario_atual);
     this->_matrixPorcoes.push_back(_solucaoPorcao_horario_atual);
+}
+
+double iteration::Dinamic::print_user_input(std::vector<int> _localIdInput,
+                        std::vector<int> _portionInput, std::ofstream &fout){
+
+    fout << "User inputs:" << std::endl;
+    for (int i = 0; i < _localIdInput.size(); i++) {
+        fout << "ID:" << _localIdInput[i] << ", Portion:" << _portionInput[i] << std::endl;
+    };
 }
 
 std::vector<std::vector<int>> iteration::Dinamic::getMatrixIDs() {
@@ -60,6 +70,115 @@ void iteration::Dinamic::printFileMenu(int numberOfMeals,
             fout << std::endl;
         }
         fout << std::endl;
+    }
+}
+
+//
+void iteration::Dinamic::parameter_input(int mealtime,size_t size){
+    ///Simulate user input according mealtime for dinamic experiments purpose
+    switch (mealtime) {
+        case 0: {
+            // distinct food
+            int number_of_distinct_food = ((rand()%2)+1);
+            if(number_of_distinct_food == 0){
+                break;
+            }else{
+                for (int i = 0; i < number_of_distinct_food; i++) {
+                    // ingested food id
+                    int food_id = (rand() % size);
+                    // portions of each food
+                    int portions_of_same_food = ((rand()% 2) + 1);
+                    // save chosed values
+                    this->_idInput.push_back(food_id);
+                    this->_portionsInput.push_back(portions_of_same_food);
+                }
+            }
+        } break;
+        case 1: {
+            // distinct food
+            int number_of_distinct_food = ((rand()%1)+1);
+            if(number_of_distinct_food == 0){
+                break;
+            }else{
+                for (int i = 0; i < number_of_distinct_food; i++) {
+                    // ingested food id
+                    int food_id = (rand() % size);
+                    // portions of each food
+                    int portions_of_same_food = ((rand() % 2)+1);
+                    // save chosed values
+                    this->_idInput.push_back(food_id);
+                    this->_portionsInput.push_back(portions_of_same_food);
+                }
+            }
+        } break;
+        case 2: {
+            // distinct food
+            int number_of_distinct_food = ((rand()%2)+1);
+            if(number_of_distinct_food == 0){
+                break;
+            }else{
+                for (int i = 0; i < number_of_distinct_food; i++) {
+                    // ingested food id
+                    int food_id = (rand() % size);
+                    // portions of each food
+                    int portions_of_same_food = ((rand() % 2)+1);
+                    // save chosed values
+                    this->_idInput.push_back(food_id);
+                    this->_portionsInput.push_back(portions_of_same_food);
+                }
+            }
+        } break;
+        case 3: {
+            // distinct food
+            int number_of_distinct_food = ((rand()%1)+1);
+            if(number_of_distinct_food == 0){
+                break;
+            }else{
+                for (int i = 0; i < number_of_distinct_food; i++) {
+                    // ingested food id
+                    int food_id = (rand() % size);
+                    // portions of each food
+                    int portions_of_same_food = ((rand() % 2)+1);
+                    // save chosed values
+                    this->_idInput.push_back(food_id);
+                    this->_portionsInput.push_back(portions_of_same_food);
+                }
+            }
+        } break;
+        case 4: {
+            // distinct food
+            int number_of_distinct_food = ((rand()%2)+1);
+            if(number_of_distinct_food == 0){
+                break;
+            }else{
+                for (int i = 0; i < number_of_distinct_food; i++) {
+                    // ingested food id
+                    int food_id = (rand() % size);
+                    // portions of each food
+                    int portions_of_same_food = ((rand() % 2)+1);
+                    // save chosed values
+                    this->_idInput.push_back(food_id);
+                    this->_portionsInput.push_back(portions_of_same_food);
+                }
+            }
+        } break;
+        case 5: {
+            // distinct food
+            int number_of_distinct_food = ((rand()%1)+1);
+            if(number_of_distinct_food == 0){
+                break;
+            }else{
+                for (int i = 0; i < number_of_distinct_food; i++) {
+                    // ingested food id
+                    int food_id = (rand() % size);
+                    // portions of each food
+                    int portions_of_same_food = ((rand() % 2)+1);
+                    // save chosed values
+                    this->_idInput.push_back(food_id);
+                    this->_portionsInput.push_back(portions_of_same_food);
+                }
+            }
+        } break;
     }
 }
 

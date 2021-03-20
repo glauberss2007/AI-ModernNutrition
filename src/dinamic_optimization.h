@@ -27,6 +27,11 @@ class Dinamic {
                                 std::vector<double> _caloriesInput,
                                 double mealtimeCaloriesTarget);
 
+    // print inputed itens
+    double print_user_input(std::vector<int> _localIdInput,
+                            std::vector<int> _portionInput,
+                            std::ofstream &fout);
+
     // redistributes the caloric difference
     double applyCaloriesBalance(double localCaloricDiference,
                                 int leftRecipes,
@@ -46,7 +51,7 @@ class Dinamic {
     void userItemInput(int mealtime);
 
     // receives user input from established parameters
-    //void entradaParametro(int refeicao);
+    void parameter_input(int mealtime,size_t size);
 
     // prints the diet on the screen
     void printScreenMenu(int numberOfRecipies, std::vector<int> _mealstimeHour,
