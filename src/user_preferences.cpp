@@ -497,10 +497,14 @@ int predictions::user_preferences::dinnerSimilaritySearch(
     return currentSimilariest;
 }
 
-void printMenu(const predictions::user_preferences &u) {
+void printMenu(const predictions::user_preferences &u, std::ofstream &fout) {
     std::cout << "Os IDs dos alimentos ingeridos por " << u.getName()
               << " foram:" << std::endl;
+    fout << "Os IDs dos alimentos ingeridos por " << u.getName()
+              << " foram:" << std::endl;
+
     std::cout << "Desjejum: " << std::endl;
+    fout << "Desjejum: " << std::endl;
 
     _breakfastPreferences = u.getBreakfastPreferences();
     _snack1Preferences = u.getSnack1Preferences();
@@ -520,43 +524,69 @@ void printMenu(const predictions::user_preferences &u) {
         std::cout << "ID:" << _breakfastPreferences[j]
                   << ", Porçoes:" << _breakfastPortionPreferences[j]
                   << std::endl;
+
+        fout << "ID:" << _breakfastPreferences[j]
+                  << ", Porçoes:" << _breakfastPortionPreferences[j]
+                  << std::endl;
     }
     std::cout << std::endl;
+    fout << std::endl;
 
     std::cout << "Lanche1: " << std::endl;
+    fout << "Lanche1: " << std::endl;
     for (unsigned long j = 0; j < _snack1Preferences.size(); j++) {
         std::cout << "ID:" << _snack1Preferences[j]
                   << ", Porçoes:" << _snack1PortionPreferences[j] << std::endl;
+        fout << "ID:" << _snack1Preferences[j]
+                  << ", Porçoes:" << _snack1PortionPreferences[j] << std::endl;
     }
     std::cout << std::endl;
+    fout << std::endl;
 
     std::cout << "Almoco: " << std::endl;
+    fout << "Almoco: " << std::endl;
+
     for (unsigned long j = 0; j < _lunchPreferences.size(); j++) {
         std::cout << "ID:" << _lunchPreferences[j]
                   << ", Porçoes:" << _lunchPortionPreferences[j] << std::endl;
+        fout << "ID:" << _lunchPreferences[j]
+                  << ", Porçoes:" << _lunchPortionPreferences[j] << std::endl;
     }
     std::cout << std::endl;
+    fout << std::endl;
 
     std::cout << "Lanche2: " << std::endl;
+    fout << "Lanche2: " << std::endl;
     for (unsigned long j = 0; j < _snack2Preferences.size(); j++) {
         std::cout << "ID:" << _snack2Preferences[j]
                   << ", Porçoes:" << _snack2PortionPreferences[j] << std::endl;
+        fout << "ID:" << _snack2Preferences[j]
+                  << ", Porçoes:" << _snack2PortionPreferences[j] << std::endl;
     }
     std::cout << std::endl;
+    fout << std::endl;
 
     std::cout << "Jantar: " << std::endl;
+    fout << "Jantar: " << std::endl;
     for (unsigned long j = 0; j < _dinnerPreferences.size(); j++) {
         std::cout << "ID:" << _dinnerPreferences[j]
                   << ", Porçoes:" << _dinnerPortionPreferences[j] << std::endl;
+        fout << "ID:" << _dinnerPreferences[j]
+                  << ", Porçoes:" << _dinnerPortionPreferences[j] << std::endl;
     }
     std::cout << std::endl;
+    fout << std::endl;
 
     std::cout << "Ceia: " << std::endl;
+    fout << "Ceia: " << std::endl;
     for (unsigned long j = 0; j < _supperPreferences.size(); j++) {
+        fout << "ID:" << _supperPreferences[j]
+                  << ", Porçoes:" << _supperPortionPreferences[j] << std::endl;
         std::cout << "ID:" << _supperPreferences[j]
                   << ", Porçoes:" << _supperPortionPreferences[j] << std::endl;
     }
     std::cout << std::endl;
+    fout << std::endl;
 }
 
 std::vector<int> predictions::user_preferences::getBreakfastPreferences() const {

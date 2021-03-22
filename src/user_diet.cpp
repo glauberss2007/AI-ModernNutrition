@@ -202,13 +202,12 @@ void user_diet::preferences_inclusion_limit(nutrition_facts &p){
 
             //limits the inclusion of preferred items by 33,3% of calories for this mealtime
             if ((p.calories(i.first) + aux) <
-                (p.getCaloricTargetSnack1() - p.changeTarget()) / 2) {
+                (p.getCaloricTargetSnack1() - p.changeTarget()) / 1.5) {
 
                 aux += p.calories(i.first);
 
                 // Portion of preferred items limited to 1
                 this->_portions[i.first] = 1;
-
 
             }
         }
@@ -229,7 +228,7 @@ void user_diet::preferences_inclusion_limit(nutrition_facts &p){
 
         for (auto & i : _t) {
             if ((p.calories(i.first) + aux) <
-                (p.getCaloricTargetLunch() - p.changeTarget()) / 2) {
+                (p.getCaloricTargetLunch() - p.changeTarget()) / 1.5) {
                 aux += p.calories(i.first);
                 this->_portions[i.first] = 1;
             }
@@ -252,7 +251,7 @@ void user_diet::preferences_inclusion_limit(nutrition_facts &p){
 
         for (auto & i : _t) {
             if ((p.calories(i.first) + aux) <
-                (p.getCaloricTargetSnack2() - p.changeTarget()) / 2) {
+                (p.getCaloricTargetSnack2() - p.changeTarget()) / 1.5) {
                 aux += p.calories(i.first);
                 this->_portions[i.first] = 1;
             }
@@ -275,12 +274,9 @@ void user_diet::preferences_inclusion_limit(nutrition_facts &p){
         aux =0;
         for (auto & i : _t) {
             if ((p.calories(i.first) + aux) <
-                (p.getDinnerCaloriesTarget() - p.changeTarget()) / 2) {
+                (p.getDinnerCaloriesTarget() - p.changeTarget()) / 1.5) {
                 aux += p.calories(i.first);
                 this->_portions[i.first] = 1;
-
-                std::cout << ((p.getDinnerCaloriesTarget() - p.changeTarget()) / 2) << " ";
-                std::cout << (p.calories(i.first) + aux) << " ";
             }
         }
     }
@@ -301,7 +297,7 @@ void user_diet::preferences_inclusion_limit(nutrition_facts &p){
 
         for (auto & i : _t) {
             if ((p.calories(i.first) + aux) <
-                (p.getSupperCaloricTarget() - p.changeTarget()) / 2) {
+                (p.getSupperCaloricTarget() - p.changeTarget()) / 1.5) {
                 aux += p.calories(i.first);
                 this->_portions[i.first] = 1;
             }

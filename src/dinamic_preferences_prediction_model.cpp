@@ -101,9 +101,10 @@ void run_dinamic_preferences_prediction_model(size_t problem_size, const std::st
 
     /// Starts interaction with the user for breakfast
     //receives values ​​directly from the user (Production use)
-    d.userItemInput(problem.getHour(hour));
+    //d.userItemInput(problem.getHour(hour));
     //receives values ​​by parameter in a matrix, each vector representing a mealtime (experimental use)
-    // d.entradaParametro(hour);
+    d.parameter_input(hour,problem.size());
+    d.print_user_input(d.getInputID(),d.getInputPortions(),fout);
 
     // Adds the foods currently eaten by the user as favorites (considering mealstime)
     // Breakfast
@@ -310,8 +311,9 @@ void run_dinamic_preferences_prediction_model(size_t problem_size, const std::st
     //Clears the vector with the user's old entries
     d.clearInputs();
 
-    d.userItemInput(problem.getHour(hour));
-    // d.entradaParametro(hour);
+    //d.userItemInput(problem.getHour(hour));
+    d.parameter_input(hour,problem.size());
+    d.print_user_input(d.getInputID(),d.getInputPortions(),fout);
 
     u.setSnack1Preferences(d.getInputID());
     u.setSnack1PortionPreferences(d.getInputPortions());
@@ -458,7 +460,9 @@ void run_dinamic_preferences_prediction_model(size_t problem_size, const std::st
     hour = 2;
 
     d.clearInputs();
-    d.userItemInput(problem.getHour(hour));
+    //d.userItemInput(problem.getHour(hour));
+    d.parameter_input(hour,problem.size());
+    d.print_user_input(d.getInputID(),d.getInputPortions(),fout);
 
     u.setLunchPreferences(d.getInputID());
     u.setLunchPortionsPreferences(d.getInputPortions());
@@ -590,7 +594,9 @@ void run_dinamic_preferences_prediction_model(size_t problem_size, const std::st
     hour = 3;
 
     d.clearInputs();
-    d.userItemInput(problem.getHour(hour));
+    //d.userItemInput(problem.getHour(hour));
+    d.parameter_input(hour,problem.size());
+    d.print_user_input(d.getInputID(),d.getInputPortions(),fout);
 
     u.setSnack2Preferences(d.getInputID());
     u.setSnack2PreferencesPortions(d.getInputPortions());
@@ -654,7 +660,7 @@ void run_dinamic_preferences_prediction_model(size_t problem_size, const std::st
         hour++;
         for (int i = 0; i < d.getMeasltimesLeft(); i++) {
 
-            problem.setTurn(i + 4);
+            problem.setTurn(i + 5);
             std::cout << "Turno atual: " << problem.turn() << std::endl;
             fout << "Turno atual: " << problem.turn() << std::endl;
 
@@ -708,8 +714,9 @@ void run_dinamic_preferences_prediction_model(size_t problem_size, const std::st
     hour = 4;
 
     d.clearInputs();
-    d.userItemInput(problem.getHour(hour));
-    // d.entradaParametro(hour);
+    //d.userItemInput(problem.getHour(hour));
+    d.parameter_input(hour,problem.size());
+    d.print_user_input(d.getInputID(),d.getInputPortions(),fout);
 
     u.setDinnerPreferences(d.getInputID());
     u.setDinnerPreferencesPortions(d.getInputPortions());
@@ -767,7 +774,7 @@ void run_dinamic_preferences_prediction_model(size_t problem_size, const std::st
         hour++;
         for (int i = 0; i < d.getMeasltimesLeft(); i++) {
 
-            problem.setTurn(i + 5);
+            problem.setTurn(i + 6);
             std::cout << "Turno atual: " << problem.turn() << std::endl;
             fout << "Turno atual: " << problem.turn() << std::endl;
 
@@ -819,8 +826,9 @@ void run_dinamic_preferences_prediction_model(size_t problem_size, const std::st
     hour = 5;
 
     d.clearInputs();
-    d.userItemInput(problem.getHour(hour));
-    // d.entradaParametro(hour);
+    //d.userItemInput(problem.getHour(hour));
+    d.parameter_input(hour,problem.size());
+    d.print_user_input(d.getInputID(),d.getInputPortions(),fout);
 
     u.setSupperPreferences(d.getInputID());
     u.setSupperPreferencesPortions(d.getInputPortions());
@@ -839,7 +847,11 @@ void run_dinamic_preferences_prediction_model(size_t problem_size, const std::st
     //Print final menu
     std::cout << "Sua ingestao final de calorias teve um desvio de "
               << d.getCaloricDiference() << std::endl;
-    printMenu(u);
+
+    fout << "Sua ingestao final de calorias teve um desvio de "
+              << d.getCaloricDiference() << std::endl;
+
+    printMenu(u,fout);
 
     //Ends time count
     time_req = clock() - time_req;

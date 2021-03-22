@@ -146,13 +146,11 @@ namespace predictions {
         std::vector<int> _dinnerPreferencesPortions;
         std::vector<int> _supperPreferences;
         std::vector<int> _supperPreferencesPortions;
-
-
     };
 
 }
 
 /// prints the final diet on the screen and in the file
-void printMenu(const predictions::user_preferences &u);
+void printMenu(const predictions::user_preferences &u, std::ofstream &fout);
 
 #endif // NUTRITION_PREFERENCES_H

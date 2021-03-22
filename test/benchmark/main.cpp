@@ -8,7 +8,7 @@ int main() {
     const size_t problem_size = 568;
 
     /// number of experiments
-    int number_of_experiments = 30;
+    int number_of_experiments = 1;
 
     /// Setting parameters
     /* Insert the numeral that indicates the model to be used
@@ -29,11 +29,11 @@ int main() {
 
     for (int i=1;i<=number_of_experiments;i++){
     /// Output file saved on ...ProjectName/experiments/
-    std::string path = LOCAL_PATH_EXPORTS"experiments/dinamic_only/experiments_result_";
+    std::string path = LOCAL_PATH_EXPORTS"experiments/dinamic_preferences_prediction/experiments_result_";
     std::string file_output = path + std::to_string(i);
 
     /// Solving the problem
-    run_experiment(problem_size, DINAMIC_ONLY, file_output);
+    run_experiment(problem_size, DINAMIC_PREFERENCES_PREDICTION, file_output);
     }
     return 0;
 }

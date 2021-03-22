@@ -384,7 +384,7 @@ void run_dinamic_model(const std::string& file_output) {
         hour++;
         for (int i = 0; i < d.getMeasltimesLeft(); i++) {
 
-            problem.setTurn(i + 4);
+            problem.setTurn(i + 5);
             std::cout << "Current measltime shift: " << problem.turn() << std::endl;
             fout << "Current measltime shift: " << problem.turn() << std::endl;
 
@@ -462,7 +462,7 @@ void run_dinamic_model(const std::string& file_output) {
         hour++;
         for (int i = 0; i < d.getMeasltimesLeft(); i++) {
 
-            problem.setTurn(i + 5);
+            problem.setTurn(i + 6);
             std::cout << "Current mealstime shift: " << problem.turn() << std::endl;
             fout << "Current mealstime shift: " << problem.turn() << std::endl;
 
@@ -530,7 +530,7 @@ void run_dinamic_model(const std::string& file_output) {
     //Print final menu
     std::cout << "Total menu calories deviation: "
               << d.getCaloricDiference() << std::endl;
-    printMenu(u);
+    printMenu(u, fout);
 
     //Ends time count
     time_req = clock() - time_req;
