@@ -28,7 +28,7 @@ class Dinamic {
                                 double mealtimeCaloriesTarget);
 
     // print inputed itens
-    double print_user_input(std::vector<int> _localIdInput,
+    void print_user_input(std::vector<int> _localIdInput,
                             std::vector<int> _portionInput,
                             std::ofstream &fout);
 

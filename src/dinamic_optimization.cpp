@@ -25,7 +25,7 @@ void iteration::Dinamic::saveCurrentMenu(const std::vector<int>& _solucao_horari
     this->_matrixPorcoes.push_back(_solucaoPorcao_horario_atual);
 }
 
-double iteration::Dinamic::print_user_input(std::vector<int> _localIdInput,
+void iteration::Dinamic::print_user_input(std::vector<int> _localIdInput,
                         std::vector<int> _portionInput, std::ofstream &fout){
 
     fout << "User inputs:" << std::endl;
