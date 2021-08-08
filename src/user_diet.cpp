@@ -1,6 +1,6 @@
 
 #include "user_diet.h"
-#include <matplot/matplot.h>
+//#include <matplot/matplot.h>
 
 std::mt19937 user_diet::_generator = std::mt19937(
     static_cast<unsigned long>(
@@ -107,6 +107,8 @@ std::vector<int> user_diet::disp(nutrition_facts &p, std::ofstream &fout) {
               total_zinc,total_manganes},{2500*mealstime_proportion,350*mealstime_proportion,4000*mealstime_proportion,
               45*mealstime_proportion,34*mealstime_proportion,0*mealstime_proportion}};
     }
+    
+    /*
     // Macro nutrients plot
     matplot::subplot(2,1,0);
     auto b = matplot::bar(y);
@@ -140,6 +142,7 @@ std::vector<int> user_diet::disp(nutrition_facts &p, std::ofstream &fout) {
     matplot::save(LOCAL_PATH_EXPORTS"nutritional-menu-result/nutrients.svg");
     matplot::save(LOCAL_PATH_EXPORTS"nutritional-menu-result/nutrients-latex", "epslatex");
     matplot::show();
+    */
 
     std::cout << "Calorias: " << total_calories << ", "
               << "Custo: " << total_cost << std::endl;
