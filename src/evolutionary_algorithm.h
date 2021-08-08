@@ -233,7 +233,7 @@ class evolutionary_algorithm {
   private /* members */:
     // Search parameters
     // Population management
-    size_t _population_size = 100;
+    size_t _population_size = 2500;
     size_t _number_of_islands = 5;
     enum island_structure _island_structure = island_structure::ring;
     enum island_migration_policy _island_migration_policy =
