@@ -1,7 +1,7 @@
 #include "evolutionary_algorithm.h"
-#include "matplot/matplot.h"
-#include "matplot/util/common.h"
-#include "matplot/util/keywords.h"
+//#include "matplot/matplot.h"
+//#include "matplot/util/common.h"
+//#include "matplot/util/keywords.h"
 
 #include <cmath>
 
@@ -76,19 +76,31 @@ void evolutionary_algorithm::run() {
         evolutionary_cycle();
         _fxs.push_back(this->best_fx());
     }
-    // Generate matplot convergence image
-    std::vector<int> _generations;
-    for (int j=0; j < _fxs.size(); j++) {
+        std::vector<int> _generations;
+    for (unsigned j=0; j < _fxs.size(); j++) {
         _generations.push_back(j);
-        if (j > 0 && _fxs[j] > _fxs[j-1]) _fxs[j] = _fxs[j-1];
+        //if (j > 0 && _fxs[j] > _fxs[j-1]) _fxs[j] = _fxs[j-1];
     }
-    auto a = matplot::plot(_generations,_fxs);
-    matplot::xlabel("Generation");
-    matplot::ylabel("Objective Function");
+    // Convergence curve print
+    std::ofstream ofs(LOCAL_PATH_EXPORTS"cost-100/convergence",
+                      std::ofstream::out | std::ofstream::app);
+    ofs << "convergence:" << std::endl;
+    for (double _fx : _fxs) ofs << _fx << ",";
+    ofs << std::endl;
+    ofs.close();
+    // Generate matplot convergence image
+    //std::vector<int> _generations;
+    //for (int j=0; j < _fxs.size(); j++) {
+    //    _generations.push_back(j);
+    //    if (j > 0 && _fxs[j] > _fxs[j-1]) _fxs[j] = _fxs[j-1];
+    //}
+    //auto a = matplot::plot(_generations,_fxs);
+    //matplot::xlabel("Generation");
+    //matplot::ylabel("Objective Function");
     // Export matplot convergence and vetorial image and latex
-    matplot::save(LOCAL_PATH_EXPORTS"/exports/convergence-curve/FXs.svg");
-    matplot::save(LOCAL_PATH_EXPORTS"/exports/convergence-curve/", "epslatex");
-    matplot::show();
+    //matplot::save(LOCAL_PATH_EXPORTS"/exports/convergence-curve/FXs.svg");
+    //matplot::save(LOCAL_PATH_EXPORTS"/exports/convergence-curve/", "epslatex");
+    //matplot::show();
 }
 double_t iteration;
 
