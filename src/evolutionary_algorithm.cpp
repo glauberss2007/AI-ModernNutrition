@@ -55,9 +55,9 @@ void evolutionary_algorithm::algorithm() {
     this->_competition_between_parents_and_children = false;
     this->_elitism_proportion = 0.02;
     this->_reproduction_scaling_strategy = scaling_strategy::window;
-    this->_reproduction_selection_strategy = selection_strategy::uniform;
+    this->_reproduction_selection_strategy = selection_strategy::truncate;
     this->_survival_scaling_strategy = scaling_strategy::window;
-    this->_survival_selection_strategy = selection_strategy::uniform;
+    this->_survival_selection_strategy = selection_strategy::truncate;
 }
 
 void evolutionary_algorithm::initialize_population() {
