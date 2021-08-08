@@ -260,10 +260,10 @@ class evolutionary_algorithm {
     enum scaling_strategy _reproduction_scaling_strategy =
         scaling_strategy::window;
     enum selection_strategy _reproduction_selection_strategy =
-        selection_strategy::tournament;
+        selection_strategy::uniform;
     enum scaling_strategy _survival_scaling_strategy = scaling_strategy::window;
     enum selection_strategy _survival_selection_strategy =
-        selection_strategy::tournament;
+        selection_strategy::uniform;
     double _sigma_bias = 1.0;
     double _sigma_constant = 2.0;
     double _linear_rank_selective_pressure = 1.5;
